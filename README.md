@@ -32,8 +32,8 @@ export train_cmd="run.pl -mem 4G"
 
 ```shell
 ln -snf $KALDI_ROOT/egs/sre08/v1/sid sid
-ln -snf $KALDI_ROOT/egs/wsj/s5/steps steps
-ln -snf $KALDI_ROOT/egs/wsj/s5/utils utils
+ln -snf $KALDI_ROOT/egs/sre08/v1/steps steps
+ln -snf $KALDI_ROOT/egs/sre08/v1/utils utils
 ```
 
 ### Train Step by Step
