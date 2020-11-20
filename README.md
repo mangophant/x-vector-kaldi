@@ -39,20 +39,24 @@ ln -snf $KALDI_ROOT/egs/sre08/v1/utils utils
 ### Train Step by Step
 
 ```shell
-sudo ./stage0_prepare_train_data.sh
+. ./stage0_prepare_train_data.sh
 
-sudo ./stage1_make_mfcc_vad.sh
+. ./stage1_make_mfcc_vad.sh
 
-sudo ./stage2_filter_feature.sh
+. ./stage2_filter_feature.sh
 
 # note: need to init x-vector model before training
 . ./path.sh
 nnet3-init ./exp/xvector_nnet_la/nnet.config ./exp/xvector_nnet_la/0.raw
 
-sudo ./stage3_train_x_vector.sh
+. ./stage3_train_x_vector.sh
 
-# TODO
-# extract x-vector, train plda and score
+. ./stage4_train_plda.sh
+
+. ./stage5_split_enroll_eval.sh
+
+. ./stage6_calc_eer_result.sh
+
 ```
 
 ### Reference
