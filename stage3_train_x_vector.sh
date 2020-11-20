@@ -86,5 +86,3 @@ if [ $stage -le 6 ]; then
 		--use-gpu=$use_gpu \
 		--dir=$nnet_dir  || exit 1;
 fi
-
-exit 0;
